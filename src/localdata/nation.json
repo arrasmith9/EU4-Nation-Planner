@@ -1,0 +1,13 @@
+[
+    {"id":26,"nation":"Andhra","tag":"YOR","culture":"Telugu","culture_group":"Dravidian","religion":"Hindu","tech":"Indian","national_idea":"Telugu"},
+    {"id":51,"nation":"Assam","tag":"ASS","culture":"Assamese","culture_group":"East Aryan","religion":"Hindu","tech":"Indian","national_idea":"Assamese"},
+    {"id":73,"nation":"Baghelkhand","tag":"BGL","culture":"Vindhyan","culture_group":"Hindustani","religion":"Hindu","tech":"Indian","national_idea":"Vindhyan"},
+    {"id":74,"nation":"Baglana","tag":"BGA","culture":"Malvi","culture_group":"Western Aryan","religion":"Hindu","tech":"Indian","national_idea":"Gujarati Princedom"},
+    {"id":82,"nation":"Baroda","tag":"BDA","culture":"Gujarati","culture_group":"Western Aryan","religion":"Hindu","tech":"Indian","national_idea":"Maratha"},
+    {"id":86,"nation":"Bastar","tag":"BST","culture":"Gondi","culture_group":"Central Indian","religion":"Hindu","tech":"Indian","national_idea":"Gond"},
+    {"id":98,"nation":"Bharat","tag":"BHA","culture":"Hindustani Culture Union","culture_group":"Hindustani","religion":"Hindu","tech":"Indian","national_idea":"Bharathi"},
+    {"id":102,"nation":"Bishnupur","tag":"MBL","culture":"Bengali","culture_group":"Eastern Aryan","religion":"Hindu","tech":"Indian","national_idea":"Bengali"},
+    {"id":124,"nation":"Bundelkhand","tag":"BND","culture":"Vindhyan","culture_group":"Hindustani","religion":"Hindu","tech":"Indian","national_idea":"Vindhyan"},
+    {"id":139,"nation":"Calicut","tag":"MAB","culture":"Malayalam","culture_group":"Dravidian","religion":"Hindu","tech":"Indian","national_idea":"Malabari"},
+    {"id":160,"nation":"Chanda","tag":"CHD","culture":"Gondi","culture_group":"Central Indian","religion":"Hindu","tech":"Indian","national_idea":"Gond"}
+]
