@@ -10,26 +10,6 @@ Under the hood, the application is serviced by a Node.js server querying data on
 
 Using React was a choice that was built of my work experience, as well as the new direction they've taken it. I purposefully used hooks here in order to learn how hooks were used and to keep up with the trends of the web development world. Thus, as I have learned the way hooks are used over time, there is a level of amatuerism with the way the application is built and structured code-wise.
 
-### Roadmap
-
-Due to the nature of how this is being developed, as well as the fluidity of the actual game's development, the roadmap is not a concrete plan. Features may be pushed back, cut, or become obsolete as time goes on.
-
-* Basic Nation Comparer - In Progress
-* Robust Filter/Search System
-* Idea Group Viewer/Selector
-* Nation Planner
-  - National Ideas
-  - Idea Groups
-  - Fluid Functionality Sliders (Stability, Army Tradition, etc.)
-  - Policies
-  - Government Reforms
-  - Religion Bonuses
-  - Estate Bonuses
-  - "Trading in..." Bonuses
-  - Misc. Permanent Bonuses (e.g. "Until the end of the game." bonuses)
-  - Nation-unique Functionality
-* Nation Planner Compare Tool
-
 ### Release and Use
 
 I hesitate to formally release the project for user consumption in its current state due to the limited functionality presented as well as the amatuer-looking design. Thus, I am keeping the application on my local machine for now. Ideally, time and input from those in my personal life who are not actively working on it will be able to provide a level of feedback in terms of coloring, design, and general flow. Once I have determined that the application is visually and functionally ready, I will find myself in the next problem: domain purchasing. While the money for server hosting is not necessarily a problem, what is a problem is the name. The name is not set in stone, and a stronger application name will do wonders for the future of this project.
@@ -49,3 +29,23 @@ npm start
 ```
 
 The application will then render. Remember, no network calls (that is to say, filter searching) can be used.
+
+### Roadmap
+
+Due to the nature of how this is being developed, as well as the fluidity of the actual game's development, the roadmap is not a concrete plan. Features may be pushed back, cut, or become obsolete as time goes on.
+
+* Basic Nation Comparer - In Progress
+* Robust Filter/Search System
+* Idea Group Viewer/Selector
+* Nation Planner
+  - National Ideas
+  - Idea Groups
+  - Fluid Functionality Sliders (Stability, Army Tradition, etc.)
+  - Policies
+  - Government Reforms
+  - Religion Bonuses
+  - Estate Bonuses
+  - "Trading in..." Bonuses
+  - Misc. Permanent Bonuses (e.g. "Until the end of the game." bonuses)
+  - Nation-unique Functionality
+* Nation Planner Compare Tool
