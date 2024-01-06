@@ -31,3 +31,8 @@ export interface NationIdea {
     idea_seven: string;
     ambition: string;
 }
+
+export interface filterObj {
+    field: string;
+    value: string;
+}

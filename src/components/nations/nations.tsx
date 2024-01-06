@@ -9,6 +9,7 @@ import { NationDef, NationIdea } from '../../interfaces';
 import TextField from '@mui/material/TextField';
 import nationData from '../../localdata/nation.json';
 import nationalIdeaData from '../../localdata/nationalIdeas.json'
+import NationFilterCont from './nationsFilter/nationFilterCont';
 
 function Nations(props: any) {
     const [nations, setNations] = useState<NationDef[]>(nationData);
@@ -78,12 +79,12 @@ function Nations(props: any) {
         // })
     }
 
-    const getNationData = () => {
+    const getNationData = (filter: string) => {
         axios.post('http://localhost:3949/getdata', {
             table: 'nations',
             select: 'id,nation,tag,culture,culture_group,religion,tech,national_idea',
             order_by: { field: 'nation', direction: 'asc' },
-            filter: `(${selectedSearchField} eq '${searchVal}')`
+            filter: filter
         }).then((res: any) => {
             setNations(res.data);
         });
@@ -112,24 +113,7 @@ function Nations(props: any) {
         return (
             <Grid container={true} spacing={2}>
                 <Grid item={true} xs={12}>
-                    <Grid container={true} spacing={2} >
-                        <Grid item={true} xs={3}>
-                            <TextField
-                                onChange={handleChange}
-                                label={'Field'}
-                                select={true}
-                                style={{width: '100%'}}
-                            >
-                                {renderMenuItems()}
-                            </TextField>
-                        </Grid>
-                        <Grid item={true} xs={3}>
-                            <TextField style={{width: '100%'}} label="Value" variant="standard" onChange={(event: any) => setSearchVal(event.target.value)} />
-                        </Grid>
-                        <Grid>
-                            <Button onClick={getNationData} >Search</Button>
-                        </Grid>
-                    </Grid>
+                    <NationFilterCont getNationData={() => {}} /> 
                 </Grid>
                 <Grid item={true} xs={12} >
                 <NationsGrid
