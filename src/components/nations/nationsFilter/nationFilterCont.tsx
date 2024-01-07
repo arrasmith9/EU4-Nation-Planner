@@ -51,6 +51,17 @@ function NationFilterCont(props: NationFilterContProps) {
     useEffect(() => {
         createFilters()
     }, [filterArr]);
+
+    const buildFilterString = () => {
+        let filterString = '';
+        for (let i = 0; i < filterArr.length; i++) {
+            filterString = filterString.concat(`(${filterArr[i].field} eq ${filterArr[i].value})`);
+            if (i !== filterArr.length - 1) {
+                filterString = filterString.concat(' and ');
+            }
+        }
+        return filterString;
+    }
     
     return (
         <Grid container={true} spacing={2} >
@@ -59,7 +70,7 @@ function NationFilterCont(props: NationFilterContProps) {
             </Grid>
             <Grid item={true} xs={12} sm={6} md={3}>
                 <Button onClick={() =>  addFilters()} >+</Button>
-                <Button onClick={() => {}} >Search</Button>
+                <Button onClick={() => props.getNationData(buildFilterString())} >Search</Button>
             </Grid>
         </Grid>
     )

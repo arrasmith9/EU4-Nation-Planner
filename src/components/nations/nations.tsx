@@ -61,7 +61,7 @@ function Nations(props: any) {
 
         // const promises: Promise<any>[] = [];
         // for (const uniqueNatIdea of uniqueNatIdeas) {
-        //     promises.push(axios.post('http://localhost:3949/getdata', {
+        //     promises.push(axios.get('http://localhost:3949/getdata', {
         //         table: 'nation_ideas',
         //         select: 'id,tags,title,traditions,idea_one_title,idea_one,idea_two_title,idea_two,idea_three_title,idea_three,idea_four_title,idea_four,idea_five_title,idea_five,idea_six_title,idea_six,idea_seven_title,idea_seven,ambition',
         //         order_by: { field: 'title', direction: 'asc' },
@@ -80,14 +80,15 @@ function Nations(props: any) {
     }
 
     const getNationData = (filter: string) => {
-        axios.post('http://localhost:3949/getdata', {
-            table: 'nations',
-            select: 'id,nation,tag,culture,culture_group,religion,tech,national_idea',
-            order_by: { field: 'nation', direction: 'asc' },
-            filter: filter
-        }).then((res: any) => {
-            setNations(res.data);
-        });
+        console.log(filter)
+        // axios.post('http://localhost:3949/getdata', {
+        //     table: 'nations',
+        //     select: 'id,nation,tag,culture,culture_group,religion,tech,national_idea',
+        //     order_by: { field: 'nation', direction: 'asc' },
+        //     filter: filter
+        // }).then((res: any) => {
+        //     setNations(res.data);
+        // });
     }
 
     const handleChange = (event: any) => {
@@ -113,7 +114,7 @@ function Nations(props: any) {
         return (
             <Grid container={true} spacing={2}>
                 <Grid item={true} xs={12}>
-                    <NationFilterCont getNationData={() => {}} /> 
+                    <NationFilterCont getNationData={getNationData} /> 
                 </Grid>
                 <Grid item={true} xs={12} >
                 <NationsGrid
