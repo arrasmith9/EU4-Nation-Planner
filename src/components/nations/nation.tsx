@@ -17,7 +17,7 @@ function Nation(props: NationProps) {
                 <Grid item={true} xs={12} style={{textAlign: "center"}}>
                     <label style={{color: '#ffffff', fontWeight: 'bold', fontSize: 26}}>{props.nation.nation} {`(${props.nation.tag})`}</label>
                 </Grid>
-                <Grid item={true} xs={6} style={{backgroundColor: '#40665e', borderBottomLeftRadius: '15px'}}>
+                <Grid item={true} xs={6} style={{backgroundColor: '#2d2b59', borderBottomLeftRadius: '15px'}}>
                     <Grid container={true} spacing={2}>
                         <Grid item={true} xs={12}>
                             <div style={{width: '230px', height: '230px', marginLeft: '25px'}}>

@@ -131,16 +131,8 @@ function Nations(props: any) {
 
 function getNationsInfo(setNations: (value: NationDef[]) => void, setNationIdeas: (value: NationIdea[]) => void) {
     const promises: Promise<any>[] = [];
-    promises.push(axios.post('http://localhost:3949/getdata', {
-        table: 'nations',
-        select: 'id,nation,tag,culture,culture_group,religion,tech,national_idea',
-        order_by: { field: 'nation', direction: 'asc' }
-    }));
-    promises.push(axios.post('http://localhost:3949/getdata', {
-        table: 'nation_ideas',
-        select: 'id,tags,title,traditions,idea_one_title,idea_one,idea_two_title,idea_two,idea_three_title,idea_three,idea_four_title,idea_four,idea_five_title,idea_five,idea_six_title,idea_six,idea_seven_title,idea_seven,ambition',
-        order_by: { field: 'title', direction: 'asc' }
-    }))
+    promises.push(axios.get('http://localhost:3949/getdata?table=nations&select=id,nation,tag,culture,culture_group,religion,tech,national_idea&orderByField=nation&orderByDirection=asc'));
+    promises.push(axios.post('http://localhost:3949/getdata?table=nation_ideas&select=id,tags,title,traditions,idea_one_title,idea_one,idea_two_title,idea_two,idea_three_title,idea_three,idea_four_title,idea_four,idea_five_title,idea_five,idea_six_title,idea_six,idea_seven_title,idea_seven,ambition&orderByField=title&orderByDirection=asc'))
     Promise.all(promises).then((res: any) => {
         setNations(res[0].data);
         setNationIdeas(res[1].data);
