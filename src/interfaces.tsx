@@ -36,3 +36,25 @@ export interface filterObj {
     field: string;
     value: string;
 }
+
+
+export interface IdeaGroupDef {
+    id: number;
+    idea_group_name: string;
+    idea_name1: string;
+    idea_effect1: string;
+    idea_name2: string;
+    idea_effect2: string;
+    idea_name3: string;
+    idea_effect3: string;
+    idea_name4: string;
+    idea_effect4: string;
+    idea_name5: string;
+    idea_effect5: string;
+    idea_name6: string;
+    idea_effect6: string;
+    idea_name7: string;
+    idea_effect7: string;
+    bonus: string;
+    idea_mana_type: string;
+}

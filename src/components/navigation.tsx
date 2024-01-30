@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Tabs, Tab, Typography } from '@mui/material';
 import Nations from './nations/nations';
 import AddItem from './add';
+import IdeaGroups from './ideaGroups/ideaGroups';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -49,17 +50,21 @@ function Navigation() {
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                     <Tab label="Search" {...a11yProps(0)} />
-                    <Tab label="Add" {...a11yProps(1)} />
-                    <Tab label="Update" {...a11yProps(2)} />
+                    <Tab label="National Ideas" {...a11yProps(1)} />
+                    <Tab label="Add" {...a11yProps(2)} />
+                    <Tab label="Update" {...a11yProps(3)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-                <Nations/>
+                <Nations />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <AddItem/>
+                <IdeaGroups />
             </TabPanel>
             <TabPanel value={value} index={2}>
+                <AddItem />
+            </TabPanel>
+            <TabPanel value={value} index={3}>
                 Update
             </TabPanel>
         </Box>
